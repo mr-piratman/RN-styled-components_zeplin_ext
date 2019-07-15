@@ -26,9 +26,10 @@ function generateReactRule(styleObj, containerColorMap, mixin) {
     });
 
     var selectorName = generateName(selector);
+    console.log(styleObj)
     var styleObjText = objStyleToCss(styleObj)  //JSON.stringify(styleObj, null, JSON_SPACING)
-        .replace(/"(.+)":/g, "$1:")
-        .replace( /([0-9]*\.?[0-9])+(;)?/g, "$1px")
+        // .replace(/"(.+)":/g, "$1:")
+        .replace( /([0-9]*\.?[0-9])+(;)?/g, "$1px;")
         .replace(/: colors\.(.*);/g, ": ${colors.$1};");
 
     return `const ${selectorName} = styled.View\`${styleObjText}\``;
