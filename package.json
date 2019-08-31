@@ -1,5 +1,5 @@
 {
-  "name": "RN-styled-components",
+  "name": "rn-styled-components",
   "version": "0.1.3",
   "description": "Sample extension description.",
   "scripts": {
@@ -11,8 +11,55 @@
   },
   "zeplin": {
     "displayName": "RN-styled-components",
+    "options": [
+      {
+        "name": "Color format",
+        "type": "picker",
+        "id": "colorFormat",
+        "submenu": true,
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "HEX",
+            "value": "hex"
+          },
+          {
+            "name": "RGB",
+            "value": "rgb"
+          },
+          {
+            "name": "HSL",
+            "value": "hsl"
+          }
+        ],
+        "default": "default"
+      },
+      {
+        "name": "Dimensions",
+        "type": "switch",
+        "id": "showDimensions",
+        "default": true
+      },
+      {
+        "name": "Default values",
+        "type": "switch",
+        "id": "showDefaultValues",
+        "default": true
+      },
+      {
+        "name": "Display resources from linked and parent styleguides",
+        "type": "switch",
+        "id": "useLinkedStyleguides",
+        "default": true
+      }
+    ],
     "platforms": [
-      "web"
+      "android",
+      "ios",
+      "mobile"
     ]
   },
   "dependencies": {

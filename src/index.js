@@ -15,7 +15,7 @@ function colors(context) {
 
     return {
         code: code,
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -32,7 +32,7 @@ function textStyles(context) {
 
     return {
         code: code,
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -48,7 +48,7 @@ function layer(context, selectedLayer) {
 
     return {
         code: code,
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -63,7 +63,7 @@ function exportColors(context) {
     return {
         code: code,
         filename: "colors.js",
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -74,7 +74,7 @@ function exportTextStyles(context) {
     return {
         code: code,
         filename: "fonts.js",
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -83,7 +83,7 @@ function styleguideColors(context, colorsInProject) {
     var code = getStyleguideColorsCode(options, colorsInProject);
     return {
         code,
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -96,7 +96,7 @@ function styleguideTextStyles(context, textStylesInProject) {
     var code = getStyleguideTextStylesCode(options, containerAndType, textStylesInProject);
     return {
         code,
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -106,7 +106,7 @@ function exportStyleguideColors(context, colorsInProject) {
     return {
         code,
         filename: "colors.js",
-        language: "javascript"
+        language: "scss"
     };
 }
 
@@ -116,7 +116,7 @@ function exportStyleguideTextStyles(context, textStylesInProject) {
     return {
         code,
         filename: "fonts.js",
-        language: "javascript"
+        language: "scss"
     };
 }
 
