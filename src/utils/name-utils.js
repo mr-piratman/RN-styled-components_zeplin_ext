@@ -20,10 +20,15 @@ function tokensForString(str) {
     }
 
     return matchResult.map(function (token) {
-        return token.toLowerCase();
+        return jsUcfirst(token.toLowerCase());
     });
 }
 
 export function generateName(name) {
-    return joinTokens(tokensForString(name));
+    return jsUcfirst(joinTokens(tokensForString(name)));
+}
+
+export function jsUcfirst(string) 
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

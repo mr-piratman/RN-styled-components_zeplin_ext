@@ -6,7 +6,8 @@ import {
     generateName,
     getColorMapByFormat,
     getColorStringByFormat,
-    getResources
+    getResources,
+    jsUcfirst
 } from "../utils";
 
 import { REACT_RULES_WITH_COLOR, JSON_SPACING } from "../constants";
@@ -26,13 +27,14 @@ function generateReactRule(styleObj, containerColorMap, mixin) {
     });
 
     var selectorName = generateName(selector);
-    console.log(styleObj)
+    // console.log(styleObj)
     var styleObjText = objStyleToCss(styleObj)  //JSON.stringify(styleObj, null, JSON_SPACING)
         // .replace(/"(.+)":/g, "$1:")
-        .replace( /([0-9]*\.?[0-9])+(;)?/g, "$1px;")
+        // .replace( /"( )([0-9]*\.?[0-9])+;"/g, "$1px;")
+        .replace( / ([0-9]*\.?[0-9])+(;)?/g, " $1px;")
         .replace(/: colors\.(.*);/g, ": ${colors.$1};");
 
-    return `const ${selectorName} = styled.View\`${styleObjText}\``;
+    return `const ${selectorName} = styled.${styleObj.fontFamily?'Text':'View'}\`${styleObjText}\``;
 }
 
 function getStyleguideColorTexts(colorFormat, colors) {
@@ -54,8 +56,20 @@ function getStyleguideColorsCode(options, colors) {
 function getStyleguideTextStylesCode(options, containerAndType, textStyles) {
     var textStylesObj = generateStyleguideTextStylesObject(options, containerAndType, textStyles);
 
+
+    var processedTextStyles = '';
+    Object.keys(textStylesObj).forEach(name => {
+        let style = textStylesObj[name]
+
+        processedTextStyles += `
+const ${jsUcfirst(name)} = styled.Text\`${objStyleToCss(style).replace( / ([0-9]*\.?[0-9])+(;)?/g, " $1px;").replace(/: colors\.(.*);/g, ": ${colors.$1};")}\`
+`
+    })
+
+    return processedTextStyles;
     var textStylesStr = objStyleToCss(textStylesObj)
     var processedTextStyles = textStylesStr.replace(/"(.+)":/g, "$1:").replace(/: "colors\.(.*)"/g, ": ${colors.$1}");
+    return JSON.stringify(textStylesObj);
     return `const textStyles = styled.Text\`${processedTextStyles}\``;
 
     // var textStylesStr = JSON.stringify(textStylesObj, null, JSON_SPACING);

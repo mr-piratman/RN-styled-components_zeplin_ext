@@ -4,7 +4,7 @@
 
 ## Getting started
 
-Add the extension to your project from extensions.zeplin.io.
+very much inspaired and copyed from thr react-native extension. 
 
 ## Output
 

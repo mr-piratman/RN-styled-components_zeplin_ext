@@ -2,10 +2,10 @@
   "packageName": "RN-styled-components",
   "name": "RN-styled-components",
   "description": "Sample extension description.",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "platforms": [
     "web"
   ],
-  "moduleURL": "./main.b7e0bf0f.js",
+  "moduleURL": "./main.c2136275.js",
   "readmeURL": "./README.md"
 }
