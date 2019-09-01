@@ -58,8 +58,7 @@
     ],
     "platforms": [
       "android",
-      "ios",
-      "mobile"
+      "ios"
     ]
   },
   "dependencies": {
