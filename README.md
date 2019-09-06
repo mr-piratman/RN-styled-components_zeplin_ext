@@ -73,7 +73,7 @@ Toggles always generating default values from layers or text styles, such as `fo
 
 ## Development
 
-The source code for this ext is at [Source Code](https://github.com/mr-piratman/RN-styled-components_zeplin_ext), 
+the code for this extension is at my repo on [gitHub](https://github.com/mr-piratman/RN-styled-components_zeplin_ext),
 you can also submit issues and ask for new featurs
 
 RN-styled-components extension is developed using [zem](https://github.com/zeplin/zem), Zeplin Extension Manager. zem is a command line tool that lets you quickly create and test extensions.
