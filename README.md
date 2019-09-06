@@ -1,25 +1,83 @@
-# Sample Zeplin Extension
+# Zeplin RN-styled-components Extension
 
-[Zeplin](https://zeplin.io) extension that generates sample snippets.
+Generates React Native Styled-Components Components from colors, text styles and layers. ⚛️📱
 
-## Getting started
-
-very much inspaired and copyed from thr react-native extension. 
-
-## Output
-
+Sample colors output:
+```js
+const colors = {
+  APP_GRAY: "#656565",
+  APP_BLACK: "#000000",
+  APP_BLUE: "#035fc7",
+  APP_DARK_BLUE: "#03499a",
+  APP_BG_GRAY: "#f4f4f4"
+};
 ```
-sample
+
+Sample text style output:
+```scss
+const TextStyle1 = styled.Text`
+    font-family: Rubik;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: ${colors.APP_BLACK};
+`
+
+const TextStyle2 = styled.Text`
+    font-family: Rubik;
+    font-size: 11.3px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 27.6px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: ${colors.APP_GRAY};
+`
+```
+
+Sample layer output:
+```scss
+const RectangleCopy3 = styled.View`
+    width: 225.7px;
+    height: 28px;
+    border-radius: 19.4px;
+    background-color: ${colors.APP_BLUAPP_DARK_BLUEE_LIGHT};
+    border-style: solid;
+    border-width: 1px;
+    border-color: ${colors.APP_DARK_BLUE};
+`
 ```
 
 ## Options
 
-#### Sample option
+#### Color format
 
-Sample option providing sample functionality.
+Supports HEX, RGB or HSL. Sample colors output as HSL:
+```js
+const colors = {
+  red: "hsl(0, 100%, 50%)",
+  black50: "hsla(0, 0%, 0%, 0.5)"
+};
+```
+
+#### Dimensions
+
+Toggles generating `width` and `height` properties from layers.
+
+#### Default values
+
+Toggles always generating default values from layers or text styles, such as `font-weight` and `font-style`.
 
 ## Development
 
-This extension is developed using [zem](https://github.com/zeplin/zem), Zeplin Extension Manager. zem is a command line tool that lets you quickly create, test and publish extensions.
+The source code for this ext is at [Source Code](https://github.com/mr-piratman/RN-styled-components_zeplin_ext), 
+you can also submit issues and ask for new featurs
 
-To learn more about creating Zeplin extensions, [see documentation](https://github.com/zeplin/zeplin-extension-documentation).
+RN-styled-components extension is developed using [zem](https://github.com/zeplin/zem), Zeplin Extension Manager. zem is a command line tool that lets you quickly create and test extensions.
+
+To learn more about zem, [see documentation](https://github.com/zeplin/zem).
+
+

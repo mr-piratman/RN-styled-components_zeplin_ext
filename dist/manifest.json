@@ -2,7 +2,7 @@
   "packageName": "rn-styled-components",
   "name": "RN-styled-components",
   "description": "Sample extension description.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "options": [
     {
       "name": "Color format",
