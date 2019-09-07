@@ -1,6 +1,6 @@
 {
   "name": "rn-styled-components",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Sample extension description.",
   "scripts": {
     "start": "zem start",
@@ -8,6 +8,10 @@
     "clean": "zem clean",
     "exec": "zem exec",
     "publish": "zem publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mr-piratman/RN-styled-components_zeplin_ext.git"
   },
   "zeplin": {
     "displayName": "RN-styled-components",
